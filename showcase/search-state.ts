@@ -1,0 +1,2 @@
+export type SearchState<T>={query:string;results:T[];loading:boolean;error?:string};
+export function updateSearch<T>(state:SearchState<T>,query:string):SearchState<T>{return{...state,query,loading:query.trim().length>0,error:undefined}}
