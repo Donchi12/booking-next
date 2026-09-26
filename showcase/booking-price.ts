@@ -1,0 +1,2 @@
+export type PriceBreakdown={nightlyRate:number;nights:number;cleaningFee:number;serviceFee:number};
+export function calculateTotal(input:PriceBreakdown){const subtotal=input.nightlyRate*input.nights;return subtotal+input.cleaningFee+input.serviceFee;}
