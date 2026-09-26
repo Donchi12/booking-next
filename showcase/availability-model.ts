@@ -1,0 +1,2 @@
+export type AvailabilityRequest={listingId:string;checkIn:string;checkOut:string;guests:number};
+export function validateAvailabilityRequest(input:AvailabilityRequest){const checkIn=new Date(input.checkIn),checkOut=new Date(input.checkOut);if(Number.isNaN(checkIn.getTime())||Number.isNaN(checkOut.getTime()))throw new Error("Invalid date range");if(checkOut<=checkIn)throw new Error("Check-out must be after check-in");if(input.guests<1)throw new Error("At least one guest is required");return{...input,guests:Math.floor(input.guests)};}
