@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 
 import { useSearchStore } from '@/store/SearchStore';
-import { useCurrentUser } from '@/utils/hooks/auth/useCurrentUser';
 
 import Navbar from '@/components/navbar/Navbar';
 import Header from '@/components/header/Header';
@@ -49,9 +48,8 @@ export default function HotelPage() {
   const [slideNumber, setSlideNumber] = useState(0);
   const [isImageOpen, setIsImageOpen] = useState(false);
 
-  // Get search context and user
+  // Get search context
   const { dates, options, setDates, setOptions } = useSearchStore();
-  const { data: user, } = useCurrentUser();
   // Fetch hotel details
   const {
     data: hotel,
@@ -87,21 +85,15 @@ export default function HotelPage() {
     );
   };
 
-  // Reservation handler
+  // Portfolio-safe reservation action
   const handleReserve = () => {
     if (days === 0) {
-      toast.error('No date selected', {
-        description: 'Please choose a date!'
-      });
+      toast.error('No date selected', { description: 'Please choose a date!' });
       return;
     }
-
-    if (user) {
-      // Open reservation modal or navigate to reservation page
-      router.push(`/main/reserve?hotelId=${hotelId}`);
-    } else {
-      router.push('/auth/login');
-    }
+    toast.success('Reservation flow demonstrated', {
+      description: 'The production booking and payment backend is intentionally private.'
+    });
   };
 
   const handleAnotherHotel = () => {
