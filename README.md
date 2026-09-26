@@ -1,31 +1,33 @@
-# Booking Platform
+# Booking Platform — Next.js
 
 ### Full-Stack Booking Application
 
-A Booking.com-style full-stack web project demonstrating accommodation discovery and booking-oriented user flows.
+A Booking.com-style application demonstrating accommodation discovery, search, listing, reservation-oriented UI and modern Next.js architecture.
 
 ## Engineering Focus
 
-- Next.js application architecture
-- Responsive React interfaces
+- Next.js App Router
+- TypeScript and React
+- Responsive booking interfaces
 - Search and listing workflows
-- Reusable UI components
-- API-driven application state
-- Booking-oriented user flows
+- Reusable component architecture
+- Client-side state management
+- Data-fetching patterns
+- Reservation-oriented user flows
 
-## Why It Is Public
+## Public Portfolio Scope
 
-Unlike the proprietary products documented elsewhere on this profile, this project is a public implementation example that can be inspected directly.
+This repository is intentionally published as an engineering portfolio sample. Private authentication, payment processing, database models, infrastructure configuration and proprietary backend implementation have been removed.
+
+The public code focuses on the parts useful for reviewing frontend architecture and product engineering without exposing private implementation details.
+
+## Project History
+
+This project is the later Next.js version of an earlier MERN booking application. The earlier implementation is represented by the related bookingfront, bookingadmin and bookingapi repositories.
 
 ## Getting Started
 
-```bash
 npm install
 npm run dev
-```
 
 Open http://localhost:3000.
-
-## Related Work
-
-For architecture case studies of larger private products, see the repositories linked from my GitHub profile.
