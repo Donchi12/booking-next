@@ -1,0 +1,2 @@
+import{describe,expect,it}from"vitest";import{calculateTotal}from"./booking-price";
+describe("booking price",()=>{it("calculates a deterministic total",()=>{expect(calculateTotal({nightlyRate:80,nights:3,cleaningFee:25,serviceFee:15})).toBe(280);});});
